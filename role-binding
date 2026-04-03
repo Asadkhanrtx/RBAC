@@ -1,14 +1,18 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-  name: raj-pod-access
+  name: asad-boss-rolebinding
   namespace: asad-ns
 subjects:
 - kind: User
   name: raj
   apiGroup: rbac.authorization.k8s.io
+- kind: ServiceAccount
+  name: asad-sa
+  namespace: asad-ns
+  apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: Role
-  name: pod-manager
+  name: asad-boss
   apiGroup: rbac.authorization.k8s.io
  

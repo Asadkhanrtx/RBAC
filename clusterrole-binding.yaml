@@ -1,12 +1,16 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: raj-cluster-pod-access
+  name: asad-boss-clusterbinding
 subjects:
 - kind: User
   name: raj
   apiGroup: rbac.authorization.k8s.io
+- kind: ServiceAccount
+  name: asad-sa
+  namespace: asad-ns
+  apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: ClusterRole
-  name: pod-cluster-role
+  name: asad-cluster-boss
   apiGroup: rbac.authorization.k8s.io
