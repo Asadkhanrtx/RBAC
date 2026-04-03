@@ -10,7 +10,7 @@ subjects:
 - kind: ServiceAccount
   name: asad-sa
   namespace: asad-ns
-  apiGroup: rbac.authorization.k8s.io
+  # apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: Role
   name: asad-boss
